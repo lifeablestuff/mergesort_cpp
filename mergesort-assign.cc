@@ -36,7 +36,21 @@ vector <int> merge(const vector <int> &a, const vector <int> &b){
     uint tot = a.size() + b.size();
     vector <int> s;
     //complete the function to merge vec a and vec b into vec s
-    
+    while (s.size() != tot){
+        if (a.at(i) < b.at(j)){
+            s.push_back(a.at(i));
+            i += 1;
+        }
+        else if(b.at(j)<a.at(i)){
+            s.push_back(b.at(j));
+            j+=1;
+        }
+        else if(b.at(j) == a.at(i)){
+            s.push_back(b.at(j));
+            j += 1;
+        }
+        
+            
     return s;
 }
 
@@ -58,7 +72,7 @@ vector <int> mergesort(const vector <int> &a){
     //auto mid(a.begin()+a.size()/2); 
     //Must declare iterator mid as const_iterator since we passed vector a as const by ref
     // Or just use auto :)
-    vector <int> a1(a.begin(), mid); //doesnt include the end
+    vector <int> a1(a.begin(), mid);
     vector <int> a2(mid, a.end());
     
     return //complete the rest of this line  
