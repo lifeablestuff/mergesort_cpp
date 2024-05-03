@@ -58,7 +58,7 @@ vector <int> mergesort(const vector <int> &a){
     //auto mid(a.begin()+a.size()/2); 
     //Must declare iterator mid as const_iterator since we passed vector a as const by ref
     // Or just use auto :)
-    vector <int> a1(a.begin(), mid);
+    vector <int> a1(a.begin(), mid); //doesnt include the end
     vector <int> a2(mid, a.end());
     
     return //complete the rest of this line  
